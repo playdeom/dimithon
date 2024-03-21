@@ -1,6 +1,5 @@
 import pygame
 
-# pygame setup
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
@@ -96,10 +95,11 @@ while running:
     if [1,1,1]==arr or [1,1,1]==arr2:
         who_win=1
     if who_win!=-1:
-        out=font.render("Blue win!" if not who_win else "Red win!",True,blue if who_win else red)
+        out=font.render("Blue win!" if not who_win else "Red win!",True,blue if not who_win else red)
         out_make=out.get_rect()
         out_make.centerx=300
         out_make.centery=300
+        screen.fill("black")
         screen.blit(out,out_make)
         running=False
         pygame.display.update()
