@@ -4,7 +4,7 @@ pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 running = True
-black=(0,0,0)
+black=(150,150,150)
 blue=(0,0,255)
 red=(255,0,0)
 field=[
